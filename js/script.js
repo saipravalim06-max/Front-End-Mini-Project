@@ -1,6 +1,3 @@
-// Basic JavaScript: functions, variables, conditions, DOM selection and event listeners.
-
-// Mouse events: change the message when the pointer enters/leaves a traffic light.
 document.querySelectorAll(".traffic-light").forEach(function(light) {
   light.addEventListener("mouseover", function() {
     const message = document.getElementById("lightMessage");
@@ -12,7 +9,6 @@ document.querySelectorAll(".traffic-light").forEach(function(light) {
   });
 });
 
-// Registration form: basic validation and an alert.
 const registrationForm = document.getElementById("registrationForm");
 if (registrationForm) {
   registrationForm.addEventListener("submit", function(event) {
@@ -28,7 +24,6 @@ if (registrationForm) {
   });
 }
 
-// Gallery: keyboard events (N, P, Space, Enter and Escape).
 const galleryImage = document.getElementById("galleryImage");
 if (galleryImage) {
   const galleryItems = [
@@ -57,7 +52,6 @@ if (galleryImage) {
   });
 }
 
-// Pass/cart calculation using arithmetic and input events.
 const passType = document.getElementById("passType");
 if (passType) {
   const quantity = document.getElementById("quantity");
@@ -78,7 +72,6 @@ if (passType) {
   });
 }
 
-// Login form: keydown event for PIN input, Enter and Escape handling.
 const loginPassword = document.getElementById("loginPassword");
 if (loginPassword) {
   loginPassword.addEventListener("keydown", function(event) {
@@ -103,13 +96,11 @@ if (loginForm) {
   });
 }
 
-// Additional mouse interaction: hovering over gallery thumbnails changes their outline.
 document.querySelectorAll(".photo-card").forEach(function(card) {
   card.addEventListener("mouseover", function() { card.style.outline = "3px solid #f2b36d"; });
   card.addEventListener("mouseleave", function() { card.style.outline = "none"; });
 });
 
-// Subtle mouse interaction on event cards: highlight the card while the pointer is over it.
 document.querySelectorAll(".event-card").forEach(function(card) {
   card.addEventListener("mouseenter", function() {
     card.style.borderColor = "#c98d63";
@@ -119,8 +110,6 @@ document.querySelectorAll(".event-card").forEach(function(card) {
   });
 });
 
-
-// Demo account flow: first page is login/create-profile. Data stays in this browser only.
 function getRivieraProfile() {
   try { return JSON.parse(localStorage.getItem("rivieraProfile") || "null"); }
   catch (error) { return null; }
@@ -187,7 +176,6 @@ if (entryLoginForm) {
   });
 }
 
-// Fill the personal profile form and save edits.
 const profileForm = document.getElementById("profileForm");
 if (profileForm) {
   const profile = getRivieraProfile() || {};
@@ -213,7 +201,6 @@ if (profileForm) {
   });
 }
 
-// Log out from any page.
 document.querySelectorAll("#logoutLink").forEach(function(link) {
   link.addEventListener("click", function(event) {
     event.preventDefault();
